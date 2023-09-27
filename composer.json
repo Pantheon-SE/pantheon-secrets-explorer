@@ -1,0 +1,20 @@
+{
+    "name": "pantheon-se/pantheon-secrets-explorer",
+    "description": "A simple demo plugin for showcasing Pantheon Secrets API.",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PantheonSe\\PantheonSecretsExplorer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kyle Taylor",
+            "email": "kyle.taylor@getpantheon.com"
+        }
+    ],
+    "require": {
+        "pantheon-systems/customer-secrets-php-sdk": "^1.0"
+    }
+}

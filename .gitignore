@@ -1,0 +1,26 @@
+# Ignore dependencies
+/vendor/
+
+# Ignore Node modules (if you're using any front-end tools)
+/node_modules/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore environment specific files
+*.log
+*.bak
+*.swp
+*.swo
+
+# Ignore potential sensitive files
+.env
+composer.lock
+
+# Optional: If you generate a zipped version of the plugin for distribution, you might want to exclude those too
+*.zip
+
+# IDE
+.idea/
+.vscode/
