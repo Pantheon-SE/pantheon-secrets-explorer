@@ -27,7 +27,7 @@ class AdminPage {
 	public static function registerAdminPages() {
 		add_menu_page(
 			'Pantheon Secrets Explorer',
-			'Pantheon Secrets',
+			'Secrets Explorer',
 			'manage_options',
 			'pantheon-secrets-explorer',
 			[self::class, 'displaySecretsPage'],
@@ -40,7 +40,7 @@ class AdminPage {
 			'Environment Variables',
 			'Env Variables',
 			'manage_options',
-			'pantheon-env-variables',
+			'pantheon-secrets-explorer-env-variables',
 			[self::class, 'displayEnvVariablesPage']
 		);
 	}
@@ -142,7 +142,7 @@ class AdminPage {
 	}
 
 	public function enqueueAdminScripts($hook) {
-		if ('settings_page_pantheon-secrets-explorer' !== $hook) {
+		if (strpos($hook, 'pantheon-secrets-explorer') < 0) {
 			return;
 		}
 
